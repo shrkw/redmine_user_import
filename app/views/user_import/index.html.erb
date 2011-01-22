@@ -1,20 +1,20 @@
-<% html_title l(:user_import) -%>
-<h2><%= l(:user_import) %></h2>
+<% html_title t(:user_import) -%>
+<h2><%= t(:user_import) %></h2>
 <% form_tag({:action => 'match'}, {:multipart => true}) do %>
-	<p><label><%=l(:label_upload_notice)%></label><br/>
+	<p><label><%=t(:label_upload_notice)%></label><br/>
 	<%= file_field_tag 'file', :size => 60%></p>
 
-	<fieldset class="box"><legend><%= l(:label_upload_format) %></legend>
-		 <p><label><%=l(:label_upload_encoding)%></label>
+	<fieldset class="box"><legend><%= t(:label_upload_format) %></legend>
+		 <p><label><%=t(:label_upload_encoding)%></label>
 		<%= select_tag "encoding", "<option value=\"U\">UTF8</option><option value=\"EUC\">EUC</option><option value=\"S\">SJIS</option><option value=\"N\">None</option>" %></p>
 		
-		<p><label><%=l(:label_upload_splitter)%></label>
+		<p><label><%=t(:label_upload_splitter)%></label>
 		<%= text_field_tag "splitter", ',', {:size => 3, :maxlength => 1}%></p>
 		
-		<p><label><%=l(:label_upload_wrapper)%></label>
+		<p><label><%=t(:label_upload_wrapper)%></label>
 		<%= text_field_tag "wrapper", '"', {:size => 3, :maxlength => 1}%></p>
 		
 	</fieldset>
 
-	<%= submit_tag l(:button_upload) %>
+	<%= submit_tag t(:button_upload) %>
 <% end %>

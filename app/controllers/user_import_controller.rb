@@ -54,9 +54,12 @@ class UserImportController < ApplicationController
     # fields
     @attrs = Array.new
     USER_ATTRS.each do |attr|
-      @attrs.push([l_has_string?("field_#{attr}".to_sym) ? l("field_#{attr}".to_sym) : attr.to_s.humanize, attr])
+
+#      debugger
+#      @attrs.push([l_has_string?("field_#{attr}".to_sym) ? l("field_#{attr}".to_sym) : attr.to_s.humanize, attr])
+      @attrs.push(["field_#{attr}".to_sym, attr])
     end
-    @attrs.sort!
+#    @attrs.sort!
   end
 
   def result
