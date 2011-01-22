@@ -4,12 +4,12 @@
 <% end %>
 
 <h2><%= t(:label_import_result) %></h2>
-<p><%= t(:label_result_notice, { :a => @handle_count, :b => @handle_count - @failed_count } ) %></p>
+<p><%= t(:label_result_notice, { :upload_count => @handle_count, :success_count => @handle_count - @failed_count } ) %></p>
 
 <hr/>
 
 <% if @failed_count > 0 %>
-<%= t(:label_result_failed, @failed_count) %>
+  <%= t(:label_result_failed, { :failed_count => @failed_count } ) %>
 <table class="list">
     <thead><tr>
         <th>#</th>

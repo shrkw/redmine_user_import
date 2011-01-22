@@ -1,9 +1,4 @@
-
-
-
-# English strings go here for Rails i18n
 en:
-  my_label: "My label"
 
   user_import: "User Import"
   # index view
@@ -23,6 +18,6 @@ en:
 
   # result view
   label_import_result: "Import Result"
-  label_result_notice: "%{a} issues processed. %{b} issues success imported."
-  label_result_failed: "Failed %d rows:"
+  label_result_notice: "%{upload_count} users processed. %{success_count} users success imported."
+  label_result_failed: "Failed %{failed_count} rows:"
   message_unique_filed_duplicated: "Unique field \"login\" has duplicate record"
