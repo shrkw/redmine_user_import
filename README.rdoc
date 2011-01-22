@@ -1,0 +1,7 @@
+= user_import
+
+inspired and copied by:
+- http://www.martinliu.info/2009/04/redmine_importer-redmine-csv-import-plugin/
+- http://tech.lampetty.net/tech/index.php/archives/285
+
+Thanks!
