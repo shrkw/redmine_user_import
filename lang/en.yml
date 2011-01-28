@@ -1,23 +1,22 @@
-en:
+user_import: "User Import"
 
-  user_import: "User Import"
-  # index view
-  label_upload_notice: "Select a CSV file to import. Import file must have a header row."
-  label_upload_format: "File format settings"
-  label_upload_encoding: "Encoding:"
-  label_upload_splitter: "Field seperate char:"
-  label_upload_wrapper: "Field wrap char:"
-  button_upload: "Upload File"
+# index view
+label_upload_notice: "Select a CSV file to import. Import file must have a header row."
+label_upload_format: "File format settings"
+label_upload_encoding: "Encoding:"
+label_upload_splitter: "Field seperate char:"
+label_upload_wrapper: "Field wrap char:"
+button_upload: "Upload File"
 
-  # match view
-  label_match_columns: "Matching Columns"
-  label_match_select: "Select match field"
-  label_toplines: "Display all lines of %{original_filename}:"
-  message_missing_imported_file: "Missing imported file"
-  button_submit: "Submit"
+# match view
+label_match_columns: "Matching Columns"
+label_match_select: "Select match field"
+label_toplines: "Display all lines of %s:"
+message_missing_imported_file: "Missing imported file"
+button_submit: "Submit"
 
-  # result view
-  label_import_result: "Import Result"
-  label_result_notice: "%{upload_count} users processed. %{success_count} users success imported."
-  label_result_failed: "Failed %{failed_count} rows:"
-  message_unique_filed_duplicated: "Unique field \"login\" has duplicate record"
+# result view
+label_import_result: "Import Result"
+label_result_notice: "%d issues processed. %d issues success imported."
+label_result_failed: "Failed %d rows:"
+message_unique_filed_duplicated: "Unique field \"login\" has duplicate record"
