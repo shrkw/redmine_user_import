@@ -1,6 +1,6 @@
 pl:
 
-  user_import: "Import Uzytkowników"
+  user_import: "Import Użytkowników"
   # index view
   label_upload_notice: "Wybierz plik CSV do importu. Plik musi mieć wiersz nagłówkowy."
   label_upload_format: "Ustawienia formatu pliku"
@@ -18,6 +18,6 @@ pl:
 
   # result view
   label_import_result: "Zaimportuj wyniki"
-  label_result_notice: "Przewożono %{upload_count} użytkowników. %{success_count} użytkowników zostało zaimportowanych poprawnie."
+  label_result_notice: "Przetworzono %{upload_count} użytkowników. %{success_count} użytkowników zostało zaimportowanych poprawnie."
   label_result_failed: "Nie udało się przetworzyć %{failed_count} wierszy:"
   message_unique_filed_duplicated: "Unikalne pole \"login\" posiada zduplikowane wpisy."
