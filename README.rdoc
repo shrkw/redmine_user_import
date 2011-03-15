@@ -1,7 +1,17 @@
 = user_import
 
-inspired and copied by:
+http://www.redmine.org/plugins/user_import_plugin
+https://github.com/shrkw/redmine_user_import
+
+Inspired and copied by:
 - http://www.martinliu.info/2009/04/redmine_importer-redmine-csv-import-plugin/
 - http://tech.lampetty.net/tech/index.php/archives/285
+
+Locale files contributed by:
+  Italian: Andrea Menchetti
+  Traditional chinese (Taiwan): ansoncat (Anson Chen)
+  Simplified chinese          : ansoncat (Anson Chen)
+
+  Thank you very much!!
 
 Thanks!
