@@ -15,3 +15,10 @@ Locale files contributed by:
   Thank you very much!!
 
 Thanks!
+Forked from orginal author: shrkw repository.
+My fork was created to test usability of plugin for the needs of my company. I added polish translation.
+This fork should easy up installation of the plugin with all necessary changes to localization needed by my company.
+
+= Install
+
+script/plugin install git://github.com/kardasa/redmine_user_import.git

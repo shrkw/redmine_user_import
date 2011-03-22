@@ -1,0 +1,23 @@
+pl:
+
+  user_import: "Import Użytkowników"
+  # index view
+  label_upload_notice: "Wybierz plik CSV do importu. Plik musi mieć wiersz nagłówkowy."
+  label_upload_format: "Ustawienia formatu pliku"
+  label_upload_encoding: "Kodowanie:"
+  label_upload_splitter: "Znak rozróżniający poszczególne pola:"
+  label_upload_wrapper: "Znak zawinięcia pola:"
+  button_upload: "Załaduj plik"
+
+  # match view
+  label_match_columns: "Pasujące Kolumny"
+  label_match_select: "Wybierz pasujące pola"
+  label_toplines: "Wyświetl wszystkie linie pliku %{original_filename}:"
+  message_missing_imported_file: "Brakuje zaimportowanego pliku"
+  button_submit: "Wykonaj"
+
+  # result view
+  label_import_result: "Zaimportuj wyniki"
+  label_result_notice: "Przetworzono %{upload_count} użytkowników. %{success_count} użytkowników zostało zaimportowanych poprawnie."
+  label_result_failed: "Nie udało się przetworzyć %{failed_count} wierszy:"
+  message_unique_filed_duplicated: "Unikalne pole \"login\" posiada zduplikowane wpisy."
