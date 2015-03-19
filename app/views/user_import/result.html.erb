@@ -1,15 +1,15 @@
 <% html_title t(:user_import) -%>
 <% content_for :header_tags do %>
-    <%= stylesheet_link_tag 'imoprter', :plugin => 'redmine_user_import' %>
+    <%= stylesheet_link_tag 'importer', :plugin => 'redmine_user_import' %>
 <% end %>
 
-<h2><%= t(:label_import_result) %></h2>
-<p><%= t(:label_result_notice, { :upload_count => @handle_count, :success_count => @handle_count - @failed_count } ) %></p>
+<h2><%= t(:label_user_import_result) %></h2>
+<p><%= t(:label_user_result_notice, { :upload_count => @handle_count, :success_count => @handle_count - @failed_count } ) %></p>
 
 <hr/>
 
 <% if @failed_count > 0 %>
-  <%= t(:label_result_failed, { :failed_count => @failed_count } ) %>
+  <%= t(:label_user_result_failed, { :failed_count => @failed_count } ) %>
 <table class="list">
     <thead><tr>
         <th>#</th>

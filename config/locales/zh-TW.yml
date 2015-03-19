@@ -2,22 +2,22 @@ zh-TW:
 
   user_import: "帳戶匯入"
   # index view
-  label_upload_notice: "選擇即將匯入的CSV檔案。此檔案必須包含標頭列。"
-  label_upload_format: "檔案格式設定"
-  label_upload_encoding: "文字編碼:"
-  label_upload_splitter: "欄位分隔字元:"
-  label_upload_wrapper: "欄位包圍字元:"
-  button_upload: "上傳檔案"
+  label_user_upload_notice: "選擇即將匯入的CSV檔案。此檔案必須包含標頭列。"
+  label_user_upload_format: "檔案格式設定"
+  label_user_upload_encoding: "文字編碼:"
+  label_user_upload_splitter: "欄位分隔字元:"
+  label_user_upload_wrapper: "欄位包圍字元:"
+  button_user_upload: "上傳檔案"
 
   # match view
-  label_match_columns: "欄位匹配"
-  label_match_select: "選擇匹配的欄位"
-  label_toplines: "顯示 %{original_filename} 中所有的內容:"
+  label_user_match_columns: "欄位匹配"
+  label_user_match_select: "選擇匹配的欄位"
+  label_user_toplines: "顯示 %{original_filename} 中所有的內容:"
   message_missing_imported_file: "找不到帳戶匯入檔案。"
-  button_submit: "匯入"
+  button_user_submit: "匯入"
 
   # result view
-  label_import_result: "匯入結果"
-  label_result_notice: "共處理 %{upload_count} 個帳戶, 其中 %{success_count} 個帳戶成功匯入。"
-  label_result_failed: "%{failed_count} 個帳戶匯入失敗:"
+  label_user_import_result: "匯入結果"
+  label_user_result_notice: "共處理 %{upload_count} 個帳戶, 其中 %{success_count} 個帳戶成功匯入。"
+  label_user_result_failed: "%{failed_count} 個帳戶匯入失敗:"
   message_unique_filed_duplicated: "該帳戶已經存在。"

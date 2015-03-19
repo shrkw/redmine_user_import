@@ -1,4 +1,3 @@
-require 'fastercsv'
 require 'tempfile'
 
 class UserImportController < ApplicationController
@@ -18,9 +17,13 @@ class UserImportController < ApplicationController
     wrapper = params[:wrapper]
     encoding = params[:encoding]
 
+    @samples = []
+    @headers = []
+    @attrs = []
+
     # save import file
     @original_filename = file.original_filename
-    tmpfile = Tempfile.new("redmine_user_importer")
+    tmpfile = Tempfile.new("redmine_user_importer", :encoding =>'ascii-8bit')
     if tmpfile
       tmpfile.write(file.read)
       tmpfile.close
@@ -40,26 +43,24 @@ class UserImportController < ApplicationController
     session[:importer_encoding] = encoding
 
     # display content
-    @samples = []
     i = 0
-    FasterCSV.foreach(tmpfile.path, {:headers=>true, :encoding=>encoding, :quote_char=>wrapper, :col_sep=>splitter}) do |row|
-      @samples[i] = row
-      i += 1
-    end # do
+    begin
+      CSV.foreach(tmpfile.path, {:headers=>true, :encoding=>encoding, :quote_char=>wrapper, :col_sep=>splitter}) do |row|
+        @samples[i] = row
+        i += 1
+      end # do
+    rescue => ex
+      flash.now[:error] = ex.message
+    end
 
     if @samples.size > 0
       @headers = @samples[0].headers
     end
 
     # fields
-    @attrs = Array.new
     USER_ATTRS.each do |attr|
-
-#      debugger
-#      @attrs.push([l_has_string?("field_#{attr}".to_sym) ? l("field_#{attr}".to_sym) : attr.to_s.humanize, attr])
-      @attrs.push(["field_#{attr}".to_sym, attr])
+      @attrs.push([t("field_#{attr}"), attr])
     end
-#    @attrs.sort!
   end
 
   def result
@@ -85,7 +86,7 @@ class UserImportController < ApplicationController
     @failed_count = 0
     @failed_rows = Hash.new
 
-    FasterCSV.foreach(tmpfile.path, {:headers=>true, :encoding=>encoding, :quote_char=>wrapper, :col_sep=>splitter}) do |row|
+    CSV.foreach(tmpfile.path, {:headers=>true, :encoding=>encoding, :quote_char=>wrapper, :col_sep=>splitter}) do |row|
       user = User.find_by_login(row[attrs_map["login"]])
       unless user
         user = User.new(:status => 1, :mail_notification => 0, :language => Setting.default_language)
@@ -102,7 +103,8 @@ class UserImportController < ApplicationController
         @failed_rows[@handle_count + 1] = row
       end
 
-      if (!user.save_without_validation!)
+      if (!user.save(:validate => false)) then
+        logger.info(user.errors.full_messages)
         @failed_count += 1
         @failed_rows[@handle_count + 1] = row
       end

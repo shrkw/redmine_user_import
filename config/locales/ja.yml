@@ -1,23 +1,23 @@
 ja:
-  user_import: "ユーザー一括登録"
 
+  user_import: "ユーザー一括登録"
   # index view
-  label_upload_notice: "一括登録に使うCSVファイルを選択してください。CSVファイルには任意のヘッダ行が必要です。"
-  label_upload_format: "ファイルフォーマット設定"
-  label_upload_encoding: "文字コード:"
-  label_upload_splitter: "フィールド区切り文字:"
-  label_upload_wrapper: "フィールド囲み文字:"
-  button_upload: "ファイル・アップロード"
+  label_user_upload_notice: "一括登録に使うCSVファイルを選択してください。CSVファイルには任意のヘッダ行が必要です。"
+  label_user_upload_format: "ファイルフォーマット設定"
+  label_user_upload_encoding: "文字コード:"
+  label_user_upload_splitter: "フィールド区切り文字:"
+  label_user_upload_wrapper: "フィールド囲み文字:"
+  button_user_upload: "ファイル・アップロード"
 
   # match view
-  label_match_columns: "カラム対応確認"
-  label_match_select: "フィールドとカラムを対応付けてください"
-  label_toplines: "%{original_filename} ファイルを全件表示:"
+  label_user_match_columns: "カラム対応確認"
+  label_user_match_select: "フィールドとカラムを対応付けてください"
+  label_user_toplines: "%{original_filename} ファイルを全件表示:"
   message_missing_imported_file: "アップロードされたファイルが見つかりません。"
-  button_submit: "登録"
+  button_user_submit: "登録"
 
   # result view
-  label_import_result: "登録結果"
-  label_result_notice: "アップロードされた件数 =>%{upload_count}, 成功した件数 => %{success_count}"
-  label_result_failed: "登録失敗した件数 =>  %{failed_count}, 該当行:"
+  label_user_import_result: "登録結果"
+  label_user_result_notice: "アップロードされた件数 =>%{upload_count}, 成功した件数 => %{success_count}"
+  label_user_result_failed: "登録失敗した件数 =>  %{failed_count}, 該当行:"
   message_unique_filed_duplicated: "\"login\"フィールドが既存のレコードと重複している行が見つかりました。"
