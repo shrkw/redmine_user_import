@@ -33,7 +33,7 @@ class UserImportController < ApplicationController
       end
       $tmpfiles[tmpfilename] = tmpfile
     else
-      flash[:error] = "Cannot save import file."
+      flash.now[:error] = "Cannot save import file."
       return
     end
 
@@ -72,7 +72,7 @@ class UserImportController < ApplicationController
     if tmpfilename
       tmpfile = $tmpfiles[tmpfilename]
       if tmpfile == nil
-        flash[:error] = l(:message_missing_imported_file)
+        flash.now[:error] = l(:message_missing_imported_file)
         return
       end
     end
@@ -98,7 +98,7 @@ class UserImportController < ApplicationController
         user.mail = row[attrs_map["mail"]]
         user.admin = row[attrs_map["admin"]]
       else
-        flash[:warning] = l(:message_unique_filed_duplicated)
+        flash.now[:warning] = l(:message_unique_filed_duplicated)
         @failed_count += 1
         @failed_rows[@handle_count + 1] = row
       end
