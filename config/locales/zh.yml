@@ -2,22 +2,22 @@ zh:
 
   user_import: "帐户汇入"
   # index view
-  label_upload_notice: "选择即将汇入的CSV文件。此文件必须包含标头列。"
-  label_upload_format: "文件格式设定"
-  label_upload_encoding: "文字编码:"
-  label_upload_splitter: "字段分隔字符:"
-  label_upload_wrapper: "字段包围字符:"
-  button_upload: "上传文件"
+  label_user_upload_notice: "选择即将汇入的CSV文件。此文件必须包含标头列。"
+  label_user_upload_format: "文件格式设定"
+  label_user_upload_encoding: "文字编码:"
+  label_user_upload_splitter: "字段分隔字符:"
+  label_user_upload_wrapper: "字段包围字符:"
+  button_user_upload: "上传文件"
 
   # match view
-  label_match_columns: "字段匹配"
-  label_match_select: "选择匹配的字段"
-  label_toplines: "显示 %{original_filename} 中所有的内容:"
+  label_user_match_columns: "字段匹配"
+  label_user_match_select: "选择匹配的字段"
+  label_user_toplines: "显示 %{original_filename} 中所有的内容:"
   message_missing_imported_file: "找不到帐户汇入文件。"
-  button_submit: "汇入"
+  button_user_submit: "汇入"
 
   # result view
-  label_import_result: "汇入结果"
-  label_result_notice: "共处理 %{upload_count} 个帐户, 其中 %{success_count} 个帐户成功汇入。"
-  label_result_failed: "%{failed_count} 个帐户汇入失败:"
+  label_user_import_result: "汇入结果"
+  label_user_result_notice: "共处理 %{upload_count} 个帐户, 其中 %{success_count} 个帐户成功汇入。"
+  label_user_result_failed: "%{failed_count} 个帐户汇入失败:"
   message_unique_filed_duplicated: "该帐户已经存在。"

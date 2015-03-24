@@ -1,25 +1,25 @@
 <% html_title t(:user_import) -%>
 <% content_for :header_tags do %>
-    <%= stylesheet_link_tag 'imoprter', :plugin => 'redmine_user_import' %>
+    <%= stylesheet_link_tag 'importer', :plugin => 'redmine_user_import' %>
 <% end %>
 
-<h2><%= t(:label_match_columns) %></h2>
-<% form_tag({:action => 'result'}, {:multipart => true}) do %>
-    <fieldset class="box"><legend><%= t(:label_match_select) %></legend>
+<h2><%= t(:label_user_match_columns) %></h2>
+<%= form_tag({:action => 'result'}, {:multipart => true}) do %>
+    <fieldset class="box"><legend><%= t(:label_user_match_select) %></legend>
     <% @headers.each do |column| %>
          <label class="tabular"><%= column %>:
-         <%= select_tag "fields_map[#{column}]", options_for_select( @attrs ) %></label>
+         <%= select_tag "fields_map[#{column}]", options_for_select( @attrs, column ) %></label>
     <% end %>
     </fieldset>
 
-    <%= submit_tag t(:button_submit) %>
+    <%= submit_tag t(:button_user_submit) %>
 <!--    <%= submit_tag t(:button_save_rules_and_submit) %>
-    <%= text_field_tag('rule_name', t(:label_rule_name), {:size => 32, :maxlength => 32, :onfocus => "if(this.value == '#{t(:label_rule_name)}') {this.value = ''}"}) %>
+    <%= text_field_tag('rule_name', t(:label_user_rule_name), {:size => 32, :maxlength => 32, :onfocus => "if(this.value == '#{t(:label_user_rule_name)}') {this.value = ''}"}) %>
     --><br/>
 <% end %>
 
 <hr/>
-<%= t(:label_toplines, { :original_filename => @original_filename } ) %>
+<%= t(:label_user_toplines, { :original_filename => @original_filename } ) %>
 <table class="list">
     <thead><tr>
         <% @headers.each do |column| %>

@@ -3,22 +3,22 @@ it:
   user_import: "Importa Utenti"
 
   # index view
-  label_upload_notice: "Selezionare un file in formato CSV da importare. Il file deve avere una riga di intestazione."
-  label_upload_format: "Settaggi sul formato del file"
-  label_upload_encoding: "Codifica:"
-  label_upload_splitter: "Carattere separatore campo:"
-  label_upload_wrapper: "Carattere di inclusione valore:"
-  button_upload: "Invia file"
+  label_user_upload_notice: "Selezionare un file in formato CSV da importare. Il file deve avere una riga di intestazione."
+  label_user_upload_format: "Settaggi sul formato del file"
+  label_user_upload_encoding: "Codifica:"
+  label_user_upload_splitter: "Carattere separatore campo:"
+  label_user_upload_wrapper: "Carattere di inclusione valore:"
+  button_user_upload: "Invia file"
 
   # match view
-  label_match_columns: "Colonne corrispondenti"
-  label_match_select: "Selezionare il campo corrispondente"
-  label_toplines: "Visualizza tutte le righe di %{original_filename}:"
+  label_user_match_columns: "Colonne corrispondenti"
+  label_user_match_select: "Selezionare il campo corrispondente"
+  label_user_toplines: "Visualizza tutte le righe di %{original_filename}:"
   message_missing_imported_file: "File da importare mancante"
-  button_submit: "Invia"
+  button_user_submit: "Invia"
 
   # result view
-  label_import_result: "Risultato dell'importazione"
-  label_result_notice: "%{upload_count} numero di inserimenti. %{success_count} utenti inseriti correttamente."
-  label_result_failed: "Fallito %{failed_count} righe:"
+  label_user_import_result: "Risultato dell'importazione"
+  label_user_result_notice: "%{upload_count} numero di inserimenti. %{success_count} utenti inseriti correttamente."
+  label_user_result_failed: "Fallito %{failed_count} righe:"
   message_unique_filed_duplicated: "Campo unico \"login\" ha un record duplicato"
